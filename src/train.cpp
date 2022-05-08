@@ -12,12 +12,16 @@ Train::Cage* Train::create(bool light) {
 }
 
 void Train::addCage(bool light) {
-  if (first) {
-    Cage *temp = create(light);
-    temp->prev = first->prev;
-    temp->prev->next = temp;
-    first->prev = temp;
-    first->prev->next = first;
+  if (first != nullptr) {
+    //Cage *temp = create(light);
+    //temp->prev = first->prev;
+    //temp->prev->next = temp;
+    //first->prev = temp;
+    //first->prev->next = first;
+    temp->next = first->next;
+    temp->prev = first;
+    first->next->prev = temp;
+    first->next = temp;
   } else {
     first = create(light);
   }
