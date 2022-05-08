@@ -13,7 +13,7 @@ Train::Cage* Train::create(bool light) {
 
 void Train::addCage(bool light) {
   if (first != nullptr) {
-    //Cage *temp = create(light);
+    Cage *temp = create(light);
     //temp->prev = first->prev;
     //temp->prev->next = temp;
     //first->prev = temp;
