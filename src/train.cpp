@@ -3,7 +3,7 @@
 
 Train::Train() :countOp(0), first(nullptr) {}
 
-Train::Cage *create(bool light) {
+Cage *create(bool light) {
   Cage *cage = new Cage;
   cage->light = light;
   cage->next = nullptr;
