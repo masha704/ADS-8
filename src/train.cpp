@@ -12,7 +12,7 @@ Train::Cage* Train::create(bool light) {
 }
 
 void Train::addCage(bool light) {
-  if (first && last) {
+  if (first) {
     Cage *temp = create(light);
     temp->prev = first->prev;
     temp->prev->next = temp;
