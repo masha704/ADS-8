@@ -40,17 +40,18 @@ void Train::addCage(bool light) {
 }
 
 int Train::getLength() {
-  Cage *temp = first;
-  first->light = true;
   int step = 0;
   countOp = 0;
+  int i = 0;
+  Cage *temp = first;
+  first->light = true;
   while (true) {
     step++;
     countOp++;
     temp = temp->next;
     if (temp->light) {
       temp->light = false;
-      int i = step;
+      i = step;
       for (i = step; i > 0; --i) {
         temp = temp->prev;
         countOp++;
